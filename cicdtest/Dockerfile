@@ -12,10 +12,10 @@ RUN apt-get install git -y
  
 # app 디렉토리 선정
 RUN mkdir -p /app
-RUN git clone https://github.com/cicdman/mygit.git/app 
+RUN git clone https://github.com/cicdman/mygit.git /app
 
 # app 디렉토리 선정
 #RUN mkdir -p /app
 #COPY ./app.jar /app/app.jar
 #CMD java -jar /app/app.jar
-ENTRYPOINT ["java", "-jar", "/app/app.jar"]
+ENTRYPOINT ["java", "-jar", "/app/cicdtest/app.jar"]
